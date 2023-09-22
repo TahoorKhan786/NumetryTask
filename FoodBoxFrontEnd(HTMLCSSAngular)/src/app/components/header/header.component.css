@@ -1,0 +1,193 @@
+.logo{
+    position:relative;
+    top: 8px;
+    height: 80px;
+    width: 105px;
+    cursor: pointer;
+}
+a.example-icon{
+    color: #eaeaea;
+}
+.material-icons{
+    font-size: 38px;
+}
+.btnhover:hover{
+    color: #ff214f !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #ff214f;
+    border-color: #ff214f;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ff214f;
+}
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 66 105 / 50%);
+}
+.btn-primary:active{
+    box-shadow: 0 0 0 0.2rem rgb(255 66 105 / 50%);
+}
+.mat-icon{
+    height: 41px !important;
+    width: 50px !important;
+}
+.header-title{
+    position: relative;
+    /* top: 40px;
+    left:25px; */
+    font-family: 'emoji';
+    font-style: italic;
+    font-size: 36px;
+    color: #fffefe;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    /* text-align: center; */
+}
+.text-center{
+    text-align: center !important;
+}
+.text-white{
+    color: #fffefe;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+  }
+
+  .navbar-brand {
+    text-align: center;
+  }
+  
+  .navbar-brand .brand-img {
+    width: 110px;
+    display: inline-block;
+    margin: auto;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  
+  .navbar-brand .brand-txt {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ff214f;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    font-family: "Oswald", sans-serif;
+  }
+  .affix .navbar-brand .brand-img {
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+    visibility: hidden;
+    width: 50px;
+  }
+  .affix {
+    min-height: 80px;
+    background: #343a40;
+    border-bottom: 1px solid #495057;
+  }
+  .affix .navbar-brand .brand-txt {
+    opacity: 1;
+    visibility: visible;
+    bottom: 50%;
+  }
+  
+  .fixed-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  } 
+  /* .nav-link{
+    font-weight: 700 !important;
+  }   */
+.btnMain{
+    font-size: 20px;
+}
+.btnMain:hover{
+    color: #bf1e2e;
+}
+.modal-footer button{
+    background-color: #bf1e2e;
+    color:white
+}
+th{
+    color:#bf1e2e;
+}
+.nav-item {
+    margin-bottom: -1px;
+    color: #ffffff;
+    /* background-color: #343a40; */
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    text-align: center;    
+    border-color: #dee2e6 #dee2e6 #343a40;
+    -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+      
+  }
+ul.navbar-nav{
+    flex-direction: row;
+}
+li{
+    flex-direction: row;
+}
+.header1{
+    height: 20vh;
+    background: rgb(28 32 37) no-repeat center center fixed;
+}
+.header {
+    height: 100vh;
+    max-height: 900px;
+    background: url(../../../assets/images/main.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 750px;
+}
+.header .overlay .header1{
+    height: 100%;
+    background: rgba(33, 37, 41, 0.85);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+.nav-link.active{
+    color:#ff214f;
+}

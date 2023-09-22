@@ -1,0 +1,271 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    border:1px solid rgba(0, 0, 0, 0.2)
+}
+
+/* .card{
+    padding: 20px;
+    margin: 15px auto;
+} */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    /* margin: 15px -10px; */
+    /* margin-right: 5px; */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    margin-bottom: 60px;
+  }
+.center{
+    margin: auto;
+}
+.radius{
+    border-radius: 30%;
+}
+/* .navSec a:hover{
+   color: #bf1e2e;
+    cursor: pointer;
+} */
+.card img{
+    width: 250px;
+    height:200px;
+    margin-bottom:15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.form-control{
+    /* border-radius: 40%; */
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.carousel-item {
+    height:300px;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.header .overlay1 {
+    height: 100%;
+    background: rgba(33, 37, 41, 0.85);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+         
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+.header .overlay {
+    height: 100%;
+    background: rgba(33, 37, 41, 0.85);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header {
+    height: 80vh;
+    max-height: 500px;
+    background: url(../../../assets/images/main.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 500;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-size: 50px;
+    padding-top: 150px !important;
+    justify-content: unset !important;
+  }
+  /* .btnhover:hover{
+    color: #ff214f !important;
+} */
+.nav-link.active{
+    color: #ff214f !important;
+
+}
+.zoomedPrice:hover{
+    font-size: large;
+    /* transition: transform .5s; */
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.btn-accent{
+    /* color: #f600a4; */
+    border-radius: 10%;
+    border-color: #4bc33e;
+    ;
+    background-color: #4bc33e;
+    ;
+}
+.text-center{
+    text-align: center !important;
+}
+.text-white{
+    color: #fffefe;
+}
+  .btn-primary {
+    color: #fff;
+    background-color: #ff214f;
+    border-color: #ff214f;
+}
+.btn-primary:hover {
+    color: #ff214f;
+    background-color: #ffffff !important;
+    border-color: #ff214f !important;
+}
+.btn-primary:focus, .btn-primary.focus {
+    color: #cfe7cc;
+    box-shadow: 0 0 0 0.2rem rgb(255 66 105 / 50%);
+}
+.btn-primary:active{
+    color: #1b889b !important;
+    box-shadow: 0 0 0 0.2rem rgb(255 66 105 / 50%);
+}
+.mt{
+    top: 50px !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.text-white{
+    color: #fffefe;
+}
+/* .addcart{
+    position: absolute;
+    bottom: 5px;
+    display: table;
+} */
+.addcart{
+    font-size: 1.6rem;
+    border-radius: 5%;
+}
+
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.navMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .navMenu a {
+    color: #4d4d49;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:hover {
+    color: #fddb3a;
+  }
+  
+  .navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(110px);
+    transform: translateX(110px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(285px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .example img{
+    width: 100%;
+    position: absolute;
+  }
+   .overlay2{
+    /* background: rgb(255 33 79 / 16%); */
+    /* background: rgba(33, 37, 41, 0.85); */
+    position: fixed;
+    background-image: url("https://ik.imagekit.io/ikmedia/accessories_banner.jpg?tr=w-1200,h-400") no-repeat center center fixed;
+
+    position: relative;
+  }

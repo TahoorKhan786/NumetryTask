@@ -1,0 +1,44 @@
+.logo{
+    position:relative;
+    top: -2px;
+    height: 40px;
+    width: 52px;
+    cursor: pointer;
+}
+.header-title{
+    position: relative;
+    /* top: 40px;
+    left:25px; */
+    font-family: 'emoji';
+    font-style: italic;
+    font-size: 31px;
+    color: #393737;
+    top: 6px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    /* text-align: center; */
+}
+.btnHead{
+    margin-left: 10px;
+    font-size: unset;
+}
+
+.active, .btnHead:hover{
+    color: #ff214f;
+}
+
+hr{
+    margin: 0;
+}
+.prodLogo{
+    position: relative;
+    left: -42px;
+    top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.form-control{
+    width:30%;
+    margin: 10px 0;
+}

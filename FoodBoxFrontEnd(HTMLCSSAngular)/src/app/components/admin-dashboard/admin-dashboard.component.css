@@ -1,0 +1,74 @@
+.logo{
+    position:relative;
+    top: -2px;
+    height: 40px;
+    width: 52px;
+    cursor: pointer;
+}
+.header-title{
+    position: relative;
+    /* top: 40px;
+    left:25px; */
+    font-family: 'emoji';
+    font-style: italic;
+    font-size: 31px;
+    color: #393737;
+    top: 6px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    /* text-align: center; */
+}
+
+.bthHead{
+    margin-left: 10px;
+}
+
+.active, .bthHead:hover{
+    color: #bf1e2e;
+}
+
+hr{
+    margin: 0;
+}
+.prodLogo{
+    position: relative;
+    top: 20px;
+    left: -42px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.AddProd{
+    margin: 10px;
+}
+
+.makeCenter{
+    text-align: center;
+}
+
+.form-check-input{
+    margin-top: 3px;
+}
+.btnHead{
+    margin-left: 10px;
+    font-size: 14px !important;
+}
+
+.active, .btnHead:hover{
+    color: #ff214f !important;
+}
+
+p{
+    color: red;
+}
+
+.modal-title{
+    font-size: 18px;
+}
+
+th{
+    text-align: center;
+}
+.table td, .table th{
+    padding: 1.75rem;
+}

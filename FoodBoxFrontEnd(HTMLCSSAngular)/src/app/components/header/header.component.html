@@ -1,0 +1,199 @@
+<header *ngIf="showHeader==1" id="home1" class="headr1">
+    <div class="navbar shadow-sm overlay header1">
+        <!-- <div class="container"> -->
+        <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <div class="navbar-brand align-item-center d-flex text-center"> -->
+                <div>
+                    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <mat-icon>fastfood </mat-icon>
+                    </a>
+                </div>
+                <strong class="header-title">Delicioso!!</strong>
+            <!-- </div> -->
+            <a class="navbar-brand m-auto" href="#">
+                <img src="../../../assets/images/logo.svg" class="brand-img" alt="">
+                <span class="brand-txt">Food Hut</span>
+            </a>
+
+     
+            <!-- <div *ngIf="login==0" class="text-right"> -->
+                <ul *ngIf="login==0" class="navbar-nav text-right">
+                    <li class="nav-item">
+                        <a class="btn btnMain text-white nav-link btn-primary " type="button" data-toggle="modal" [routerLink]="['/admin']">Admin</a>        
+                    </li>
+                    <li class="nav-item" >
+                        <a class="btn btnMain text-white nav-link btnhover" type="button" data-toggle="modal" data-target="#loginModal" id="custLogin">Login</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="btn btnMain text-white nav-link btnhover" type="button" data-toggle="modal" data-target="#registerModal" id="custRegister">Register</a>
+
+                    </li>
+                </ul>
+                <!-- <button class="btn btnMain" type="button" data-toggle="modal" data-target="#loginModal" id="custLogin">Login</button> -->
+                <!-- <button class="btn btnMain" type="button" data-toggle="modal" data-target="#registerModal" id="custRegister">Register</button> -->
+            <!-- </div> -->
+                <ul *ngIf="login==1" class="navbar-nav text-right">
+                <li class="nav-item"><button class="btn btnMain text-white nav-link" (click)="getActiveOrders()" type="button" data-toggle="modal" data-target="#activeOrders">Orders</button></li>
+                <li class="nav-item"><button class="btn btnMain text-white nav-link" (click)="CustomerLogout()">Logout</button></li>
+                </ul>
+        <!-- </div> -->
+        
+        <button *ngIf="login==1" routerLink="cart" class="btn cart">
+            <i style="font-size: 50px;color:#ffffff;" class="fas fa-cart-plus"></i>
+        </button>
+            </div>
+        </nav>
+        <!-- <div>
+            <h1 class="display-2 font-weight-bold my-3 text-white">Food Hut</h1>
+            <h2 class="display-4 mb-5 text-white">Always fresh &amp; Delightful</h2>
+        </div> -->
+        
+    
+    <!-- <div id="home" class="header">
+
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">Food Hut</h1>
+            <h2 class="display-4 mb-5">Always fresh &amp; Delightful</h2>
+            <a class="btn btn-lg btn-primary" href="#gallary">View Our gallary</a>
+        </div>
+    </div> -->
+</div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" id="Lcancel" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <p *ngIf="message!= ''">{{message}}</p>
+                <form (ngSubmit)="loginSubmit()">
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-3">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input [(ngModel)]="loginData.email" name="email" type="email" id="defaultForm-email"
+                                class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        </div>
+
+                        <div class="md-form mb-3">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input [(ngModel)]="loginData.password" name="password" type="password"
+                                id="defaultForm-pass" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" id="loginSubmit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                    <p *ngIf="message!= ''">{{message}}</p>
+                    <button type="button" class="close" id="Rcancel" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form [formGroup]="formValue">
+                    <div class="modal-body mx-3">
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-envelope prefix grey-text"> Email Id</i>
+                            <input type="email" formControlName="email" id="orangeForm-Remail"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-lock prefix grey-text"> Password</i>
+                            <input type="password" formControlName="password" id="orangeForm-Rpass"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Full Name</i>
+                            <input type="text" formControlName="name" id="orangeForm-name"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Contact Number</i>
+                            <input type="text" formControlName="contact" id="orangeForm-contact"
+                                class="form-control validate">
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Address</i>
+                            <input type="text" formControlName="address" id="orangeForm-address"
+                                class="form-control validate">
+
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-primary" (click)=addCustomer()>Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="activeOrders">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Previous Orders</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+ 
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div *ngIf="activeOrders.length!=0">
+                        <table class="table">
+                            <thead class="thead-#FF214F">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Cost</th>
+                                    <th>Purchase Data</th>
+                                    <th>Transaction Id</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let pur of activeOrders">
+                                    <td>{{pur.productname}}</td>
+                                    <td>{{pur.quantity}}</td>
+                                    <td>{{pur.totalcost}}</td>
+                                    <td>{{pur.dop}}</td>
+                                    <td>{{pur.transactionid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div *ngIf="activeOrders.length==0">
+                        <h5 class="text-center text-danger">No Previous orders</h5>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
